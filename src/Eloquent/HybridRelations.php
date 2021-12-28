@@ -66,7 +66,10 @@ trait HybridRelations
         return new MorphOne($instance->newQuery(), $this, $type, $id, $localKey);
     }
 
-    public function morphToMany($related, $name, $table = null, $foreignKey = null, $relatedKey = null, $inverse = false)
+    /*
+     * @todo fix to match with latest laravel
+     */
+    public function morphToMany($related, $name, $table = null, $foreignKey = null, $relatedKey = null, $parentKey = null, $relatedKey2 = null, $inverse = false)
     {
       // Check if it is a relation with an original model.
       if (!is_subclass_of($related, \Robsonvn\CouchDB\Eloquent\Model::class)) {
