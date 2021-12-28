@@ -66,7 +66,7 @@ class Connection extends BaseConnection
      *
      * @return Query\Builder
      */
-    public function table($table)
+    public function table($table, $as = null)
     {
         return $this->collection($table);
     }
